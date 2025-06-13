@@ -1,0 +1,7 @@
+{
+  "watch": ["src", "app.ts", "server.ts", ".env"],
+  "ext": "js,ts,json",
+  "ignore": ["src/logs", "node_modules"],
+  "delay": "500ms",
+  "verbose": true
+}

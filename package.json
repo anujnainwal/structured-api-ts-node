@@ -1,0 +1,39 @@
+{
+  "name": "structured-api-ts-node",
+  "version": "1.0.0",
+  "description": "A well-structured RESTful API built with Node.js, Express, and TypeScript. Follows clean architecture principles with modular routing, centralized error handling, and typed request/response validation for scalable and maintainable backend services.",
+  "homepage": "https://github.com/anujnainwal/structured-api-ts-node#readme",
+  "bugs": {
+    "url": "https://github.com/anujnainwal/structured-api-ts-node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anujnainwal/structured-api-ts-node.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "ts-node server.ts",
+    "dev": "nodemon --watch src --watch app.ts --watch server.ts --watch .env --ext js,ts,json --ignore src/logs --ignore node_modules --delay 500ms --verbose",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/helmet": "^0.0.48",
+    "@types/node": "^22.15.30",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0"
+  }
+}
