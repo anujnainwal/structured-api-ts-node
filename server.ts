@@ -1,6 +1,8 @@
+import "tsconfig-paths/register";
 import cluster from "cluster";
 import os from "os";
 import app from "./app";
+import db from "@/models/index";
 
 const PORT = process.env.PORT || 6969;
 const numCPUs = os.cpus().length;
@@ -35,6 +37,21 @@ if (cluster.isPrimary) {
     cluster.fork();
   });
 } else {
+  db.sequelize
+    .authenticate()
+    .then(() => {
+      console.log(
+        "\n🗄️ Database connection has been established successfully.\n"
+      );
+
+      app.listen(PORT, () => {
+        logWorkerStartup(process.pid);
+      });
+    })
+    .catch((error: Error) => {
+      console.error("❌ Unable to connect to the database:");
+      console.error(error.message);
+    });
   app.listen(PORT, () => {
     logWorkerStartup(process.pid);
   });

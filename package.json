@@ -19,21 +19,34 @@
   },
   "scripts": {
     "start": "ts-node server.ts",
-    "dev": "nodemon --watch src --watch app.ts --watch server.ts --watch .env --ext js,ts,json --ignore src/logs --ignore node_modules --delay 500ms --verbose",
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register server.ts",
     "build": "tsc",
+    "db:init": "sequelize-cli init",
+    "db:model": "sequelize-cli model:generate",
+    "db:mig": "sequelize-cli migration:generate",
+    "db:seed": "sequelize-cli seed:generate",
+    "db:up": "sequelize-cli db:migrate",
+    "db:seed:all": "sequelize-cli db:seed:all",
+    "db:reset": "sequelize-cli db:drop && sequelize-cli db:create && sequelize-cli db:migrate && sequelize-cli db:seed:all",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
+    "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.3",
     "@types/helmet": "^0.0.48",
     "@types/node": "^22.15.30",
+    "sequelize-cli": "^6.6.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "helmet": "^8.1.0"
+    "helmet": "^8.1.0",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7",
+    "tsconfig-paths": "^4.2.0"
   }
 }
