@@ -78,20 +78,38 @@ npm run dev
 ## 📂 Project Structure
 
 ```
+
+```
+
+├── docs/ # Project documentation
+├── logs/ # App logs
+├── node_modules/
 ├── src/
-│   ├── config/        # Sequelize config and env setup
-│   ├── controllers/   # Route controllers
-│   ├── middlewares/   # Express middlewares
-│   ├── models/        # Sequelize models
-│   ├── routes/        # API route definitions
-│   ├── services/      # Business logic
-│   ├── utils/         # Helpers/utilities
-│   ├── app.ts         # Express app instance
-│   └── index.ts       # Server entry point
-├── server.ts          # App bootstrapping file
-├── .env               # Environment variables
-├── package.json       # NPM scripts & dependencies
-└── tsconfig.json      # TypeScript configuration
+│ ├── config/ # Configuration files
+│ ├── constants/ # Constant values
+│ ├── controllers/ # Route controllers
+│ ├── cron-job/ # Scheduled jobs
+│ ├── helpers/ # Utility helper functions
+│ ├── interfaces/ # TypeScript interfaces
+│ ├── middlewares/ # Express middlewares
+│ ├── migrations/ # Sequelize migrations
+│ ├── models/ # Sequelize models
+│ ├── routes/ # API route definitions
+│ ├── scripts/ # Custom scripts
+│ ├── services/ # Business logic
+│ ├── types/ # Global TypeScript types
+│ ├── utils/ # Reusable utilities
+│ └── validations/ # Request validation schemas
+├── .env # Environment variables
+├── .gitignore # Git ignore file
+├── .sequelizerc # Sequelize config path resolver
+├── app.ts # Express app instance
+├── server.ts # Entry point to start the server
+├── nodemon.json # Nodemon config
+├── package.json # Project metadata and scripts
+├── package-lock.json
+└── tsconfig.json # TypeScript configuration
+
 ```
 
 ---
@@ -140,3 +158,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## 📄 License
 
 MIT © [Anuj Nainwal](https://github.com/anujnainwal)
+```
