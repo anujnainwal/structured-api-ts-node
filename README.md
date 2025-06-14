@@ -78,9 +78,6 @@ npm run dev
 ## 📂 Project Structure
 
 ```
-
-```
-
 ├── docs/ # Project documentation
 ├── logs/ # App logs
 ├── node_modules/
@@ -109,7 +106,6 @@ npm run dev
 ├── package.json # Project metadata and scripts
 ├── package-lock.json
 └── tsconfig.json # TypeScript configuration
-
 ```
 
 ---
@@ -158,4 +154,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## 📄 License
 
 MIT © [Anuj Nainwal](https://github.com/anujnainwal)
+
+```
+
 ```
